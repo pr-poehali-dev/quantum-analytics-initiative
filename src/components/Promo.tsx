@@ -30,8 +30,8 @@ export default function Promo() {
       </h3>
 
       <p className="absolute bottom-12 right-6 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-5xl z-10">
-        Манипулятор поднимает до 3 тонн — бытовки, контейнеры, спецтехника.
-        Газель до 2 тонн — быстро довезём мебель, инструмент или стройматериалы куда нужно.
+        Газель до 2 тонн. Манипулятор до 3 тонн.
+        Цена договорная — звоните и назовите задачу.
       </p>
     </div>
   );

@@ -9,13 +9,23 @@ export default function Featured() {
         />
       </div>
       <div className="flex-1 text-left lg:h-[800px] flex flex-col justify-center lg:mr-12 lg:order-1">
-        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Работаем без выходных</h3>
-        <p className="text-2xl lg:text-4xl mb-8 text-neutral-900 leading-tight">
-          Газель до 2 тонн — для небольших переездов, доставки мебели и стройматериалов.
-          Манипулятор с подъёмом до 3 тонн — для погрузки спецтехники, бытовок и негабарита.
-        </p>
+        <h3 className="uppercase mb-4 text-sm tracking-wide text-neutral-600">Работаем без выходных — цена договорная</h3>
+        <div className="mb-8 flex flex-col gap-4">
+          <div>
+            <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">Грузоперевозки</p>
+            <p className="text-2xl lg:text-3xl text-neutral-900 leading-tight font-medium">
+              Газель до 2 тонн — переезды, мебель, стройматериалы, сборные грузы
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">Услуги манипулятора</p>
+            <p className="text-2xl lg:text-3xl text-neutral-900 leading-tight font-medium">
+              Подъём до 3 тонн — бытовки, спецтехника, контейнеры, негабарит
+            </p>
+          </div>
+        </div>
         <button className="bg-black text-white border border-black px-4 py-2 text-sm transition-all duration-300 hover:bg-white hover:text-black cursor-pointer w-fit uppercase tracking-wide">
-          Рассчитать стоимость
+          Узнать стоимость
         </button>
       </div>
     </div>

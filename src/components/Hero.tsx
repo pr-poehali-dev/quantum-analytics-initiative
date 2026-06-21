@@ -30,8 +30,11 @@ export default function Hero() {
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
           ГРУЗОПЕРЕВОЗКИ
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
-          Услуги манипулятора и доставка грузов любой сложности — быстро, надёжно, круглосуточно
+        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90 mb-6">
+          Газель до 2 тонн и манипулятор до 3 тонн — быстро, надёжно, круглосуточно
+        </p>
+        <p className="text-base md:text-lg uppercase tracking-widest opacity-70">
+          Цена договорная — звоните, рассчитаем
         </p>
       </div>
     </div>
