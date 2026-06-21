@@ -19,10 +19,15 @@ export default function Hero() {
       ref={container}
       className="relative flex items-center justify-center h-screen overflow-hidden bg-neutral-950"
     >
-      {/* Фон с тонкой текстурой */}
+      {/* Фоновое изображение с параллаксом */}
       <motion.div style={{ y: yBg }} className="absolute inset-0 w-full h-full">
-        <div className="w-full h-full bg-gradient-to-b from-neutral-900 via-neutral-950 to-black" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_40%,rgba(80,80,80,0.12)_0%,transparent_70%)]" />
+        <img
+          src="https://cdn.poehali.dev/projects/42405e89-b04a-4130-b8b4-985457f040c4/files/542622b9-821f-41cc-9678-e1a94c1df3fe.jpg"
+          alt="Фон грузоперевозки"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
       </motion.div>
 
       {/* Горизонтальная разделительная линия-акцент */}
