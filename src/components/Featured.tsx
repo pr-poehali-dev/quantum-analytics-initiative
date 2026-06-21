@@ -20,7 +20,7 @@ export default function Featured() {
           <div>
             <p className="text-xs uppercase tracking-widest text-neutral-400 mb-1">Услуги манипулятора</p>
             <p className="text-2xl lg:text-3xl text-neutral-900 leading-tight font-medium">
-              Подъём до 3 тонн — бытовки, спецтехника, контейнеры, негабарит
+              Подъём до 5 тонн — бытовки, спецтехника, контейнеры, негабарит
             </p>
           </div>
         </div>
