@@ -19,8 +19,8 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://cdn.poehali.dev/projects/42405e89-b04a-4130-b8b4-985457f040c4/files/c00c0041-55ff-44fd-a2fd-739884397c30.jpg"
-          alt="Манипулятор поднимает груз"
+          src="https://cdn.poehali.dev/projects/42405e89-b04a-4130-b8b4-985457f040c4/files/4725be48-ca7d-44aa-a49f-fcd2eda38aaa.jpg"
+          alt="Газель тентовая и манипулятор Митсубиси Фусо"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
