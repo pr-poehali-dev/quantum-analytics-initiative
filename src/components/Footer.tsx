@@ -1,65 +1,52 @@
+import Icon from "@/components/ui/icon";
+
 export default function Footer() {
   return (
-    <div
-      className="relative h-[400px] sm:h-[600px] lg:h-[800px] max-h-[800px]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="relative h-[calc(100vh+400px)] sm:h-[calc(100vh+600px)] lg:h-[calc(100vh+800px)] -top-[100vh]">
-        <div className="h-[400px] sm:h-[600px] lg:h-[800px] sticky top-[calc(100vh-400px)] sm:top-[calc(100vh-600px)] lg:top-[calc(100vh-800px)]">
-          <div className="bg-neutral-900 py-4 sm:py-6 lg:py-8 px-4 sm:px-6 h-full w-full flex flex-col justify-between">
-            <div className="flex shrink-0 gap-8 sm:gap-12 lg:gap-20">
-              <div className="flex flex-col gap-1 sm:gap-2">
-                <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Услуги</h3>
-                <a
-                  href="#manipulator"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Манипулятор
-                </a>
-                <a
-                  href="#delivery"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Грузоперевозки
-                </a>
-                <a
-                  href="#oversized"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Негабарит
-                </a>
-              </div>
-              <div className="flex flex-col gap-1 sm:gap-2">
-                <h3 className="mb-1 sm:mb-2 uppercase text-neutral-400 text-xs sm:text-sm">Контакты</h3>
-                <a
-                  href="tel:+70000000000"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  +7 (000) 000-00-00
-                </a>
-                <a
-                  href="mailto:info@gruzauto.ru"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  info@gruzauto.ru
-                </a>
-                <a
-                  href="#contact"
-                  className="text-white hover:text-neutral-400 transition-colors duration-300 text-sm sm:text-base"
-                >
-                  Работаем 24/7
-                </a>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 sm:gap-0">
-              <h1 className="text-[14vw] sm:text-[12vw] lg:text-[10vw] leading-[0.8] mt-4 sm:mt-6 lg:mt-10 text-white font-bold tracking-tight">
-                ГРУЗАВТО
-              </h1>
-              <p className="text-white text-sm sm:text-base">{new Date().getFullYear()} ГрузАвто Манипулятор</p>
+    <footer className="bg-foreground text-background py-16">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-10 mb-12">
+          <div>
+            <h3 className="font-serif text-3xl mb-4">Lash Studio</h3>
+            <p className="text-background/60 text-sm leading-relaxed max-w-xs">
+              Наращивание и ламинирование ресниц. Подчёркиваю вашу естественную красоту.
+            </p>
+          </div>
+          <div>
+            <h4 className="uppercase text-xs tracking-widest text-background/50 mb-4">Контакты</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center gap-2">
+                <Icon name="Phone" size={16} className="text-background/60" />
+                <a href="tel:+70000000000" className="hover:text-background/70 transition-colors">+7 (000) 000-00-00</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Icon name="MapPin" size={16} className="text-background/60" />
+                <span>г. Москва, ул. Примерная, 1</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Icon name="Clock" size={16} className="text-background/60" />
+                <span>Ежедневно 9:00 — 21:00</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="uppercase text-xs tracking-widest text-background/50 mb-4">Я в соцсетях</h4>
+            <div className="flex gap-3">
+              <a href="#" className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition-colors">
+                <Icon name="Instagram" size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition-colors">
+                <Icon name="Send" size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-background/10 transition-colors">
+                <Icon name="MessageCircle" size={18} />
+              </a>
             </div>
           </div>
         </div>
+        <div className="border-t border-background/10 pt-6 text-center text-background/40 text-xs">
+          {new Date().getFullYear()} Lash Studio. Все права защищены.
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }

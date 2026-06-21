@@ -1,67 +1,57 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
+const HERO_IMG = "https://cdn.poehali.dev/projects/42405e89-b04a-4130-b8b4-985457f040c4/files/55f14fd6-431e-490a-9ddb-403d621e6e2c.jpg";
+
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
   });
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0vh", "40vh"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "30vh"]);
 
   return (
     <div
+      id="hero"
       ref={container}
-      className="relative flex items-center justify-center h-screen overflow-hidden bg-neutral-950"
+      className="relative flex items-center min-h-screen overflow-hidden"
     >
-      {/* Фоновое изображение с параллаксом */}
-      <motion.div style={{ y: yBg }} className="absolute inset-0 w-full h-full">
-        <img
-          src="https://cdn.poehali.dev/projects/42405e89-b04a-4130-b8b4-985457f040c4/files/542622b9-821f-41cc-9678-e1a94c1df3fe.jpg"
-          alt="Фон грузоперевозки"
-          className="w-full h-full object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+      <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
+        <img src={HERO_IMG} alt="Наращивание ресниц" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
       </motion.div>
 
-      {/* Градиент-затухание снизу */}
-      <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent z-20 pointer-events-none" />
-
-      {/* Текст */}
-      <div className="relative z-30 text-center text-white px-6">
-        <motion.p
-          className="text-xs uppercase tracking-[0.4em] text-white/40 mb-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Надёжно · Быстро · Круглосуточно
-        </motion.p>
-        <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-5 leading-none"
-          initial={{ opacity: 0, y: -20 }}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
+        <motion.div
+          className="max-w-xl"
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          ГРУЗОПЕРЕВОЗКИ
-        </motion.h1>
-        <motion.p
-          className="text-base md:text-lg max-w-lg mx-auto text-white/60 mb-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
-          Газель до 2 тонн и манипулятор до 5 тонн
-        </motion.p>
-        <motion.p
-          className="text-sm uppercase tracking-widest text-white/35"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-        >
-          Цена договорная — звоните, рассчитаем
-        </motion.p>
+          <p className="text-sm uppercase tracking-[0.3em] text-primary mb-5">Наращивание ресниц</p>
+          <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] text-foreground mb-6">
+            Взгляд, от которого невозможно оторваться
+          </h1>
+          <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
+            Классика, 2D, 3D и роскошные объёмы. Подберу идеальный изгиб и длину под форму ваших глаз — естественно и надолго.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a
+              href="#booking"
+              className="bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm uppercase tracking-wide hover:opacity-90 transition-opacity"
+            >
+              Записаться
+            </a>
+            <a
+              href="#portfolio"
+              className="border border-primary/40 text-foreground px-8 py-4 rounded-full text-sm uppercase tracking-wide hover:bg-secondary transition-colors"
+            >
+              Смотреть работы
+            </a>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
